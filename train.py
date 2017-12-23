@@ -23,7 +23,8 @@ tf.flags.DEFINE_boolean("use_bias", False, "Use bias (default: False)")
 # Training Parameters
 tf.flags.DEFINE_float("learning_rate", 1e-2, "Starter Learning Rate (default: 1e-2)")
 tf.flags.DEFINE_integer("batch_size", 64, "Batch Size (default: 128)")
-tf.flags.DEFINE_integer("num_epochs", 50, "Number of training epochs (default: 50)")
+#tf.flags.DEFINE_integer("num_epochs", 50, "Number of training epochs (default: 50)")
+tf.flags.DEFINE_integer("num_epochs", 1, "Number of training epochs (default: 50)")
 tf.flags.DEFINE_integer("evaluate_every", 50, "Evaluate model on dev set after this many steps (default: 50)")
 tf.flags.DEFINE_boolean("enable_tensorboard", True, "Enable Tensorboard (default: True)")
 
