@@ -124,3 +124,6 @@ for train_batch in train_batches:
 		acc_list.append(acc)
 		print("{}: Evaluation Summary, Loss {:g}, Acc {:g}".format(time_str, sum_loss/i, acc))
 		print("{}: Current Max Acc {:g} in Iteration {}".format(time_str, max(acc_list), int(acc_list.index(max(acc_list))*FLAGS.evaluate_every)))
+
+saver = tf.train.Saver()
+save_path = saver.save(sess, "mdl/vdcnn_large.ckpt")
