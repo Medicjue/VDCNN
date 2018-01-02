@@ -125,6 +125,7 @@ class VDCNN():
 
         # Calculate Mean cross-entropy loss
         with tf.name_scope("loss"):
+            self.prob = tf.nn.softmax(self.fc3, name='prob')
             self.predictions = tf.argmax(self.fc3, 1, name="predictions")
             losses = tf.nn.softmax_cross_entropy_with_logits(logits=self.fc3, labels=self.input_y)
             regularization_losses = tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES)
